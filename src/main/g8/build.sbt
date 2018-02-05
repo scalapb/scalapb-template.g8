@@ -10,6 +10,6 @@ PB.targets in Compile := Seq(
 )
 
 libraryDependencies ++= Seq(
-  "com.thesamet.scalapb" %% "scalapb-runtime" % "$scalapb_version$" % "protobuf",
-  "com.thesamet.scalapb" %% "scalapb-runtime-grpc" % "$scalapb_version$"
+  "com.thesamet.scalapb" %% "scalapb-runtime" % scalapb.compiler.Version.scalapbVersion % "protobuf",
+  "com.thesamet.scalapb" %% "scalapb-runtime-grpc" % scalapb.compiler.Version.scalapbVersion
 )
