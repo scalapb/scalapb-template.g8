@@ -1,6 +1,6 @@
 name := "$name$"
 
-scalaVersion := "2.12.3"
+scalaVersion := "$scala_version$"
 
 scalacOptions in ThisBuild ++= Seq("-Xfatal-warnings", "-Xlint")
 
