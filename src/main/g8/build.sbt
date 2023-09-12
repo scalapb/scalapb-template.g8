@@ -2,11 +2,11 @@ name := "$name$"
 
 scalaVersion := "$scala_version$"
 
-scalacOptions in ThisBuild ++= Seq("-Xfatal-warnings", "-Xlint")
+ThisBuild / scalacOptions ++= Seq("-Xfatal-warnings", "-Xlint")
 
-PB.targets in Compile := Seq(
-  PB.gens.java -> (sourceManaged in Compile).value / "java",
-  scalapb.gen(javaConversions=true) -> (sourceManaged in Compile).value / "scalapb"
+Compile / PB.targets := Seq(
+  PB.gens.java -> (Compile / sourceManaged).value / "java",
+  scalapb.gen(javaConversions=true) -> (Compile / sourceManaged).value / "scalapb"
 )
 
 libraryDependencies ++= Seq(
